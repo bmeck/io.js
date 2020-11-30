@@ -253,6 +253,28 @@ effort to report stack traces relative to the original source file.
 Overriding `Error.prepareStackTrace` prevents `--enable-source-maps` from
 modifying the stack trace.
 
+### `--experimental-abortcontroller`
+<!-- YAML
+added:
+  - v15.0.0
+  - v14.17.0
+changes:
+  - version: v15.0.0
+    pr-url: https://github.com/nodejs/node/pull/33527
+    description: --experimental-abortcontroller is no longer required.
+-->
+
+`AbortController` and `AbortSignal` support is enabled by default.
+Use of this command-line flag is no longer required.
+
+### `--experimental-https-modules`
+<!-- YAML
+added: REPLACEME
+-->
+> Stability: 1 - Experimental
+
+Enable experimental support for loading modules using `import` over `https:`.
+
 ### `--experimental-import-meta-resolve`
 
 <!-- YAML
@@ -293,6 +315,7 @@ Use the specified file as a security policy.
 <!-- YAML
 added: v16.6.0
  -->
+ Use this flag to disable top-level await in REPL.
 
 Use this flag to disable top-level await in REPL.
 
@@ -1538,6 +1561,7 @@ Node.js options that are allowed are:
 * `--enable-fips`
 * `--enable-source-maps`
 * `--experimental-abortcontroller`
+* `--experimental-https-modules`
 * `--experimental-import-meta-resolve`
 * `--experimental-json-modules`
 * `--experimental-loader`

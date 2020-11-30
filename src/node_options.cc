@@ -315,6 +315,10 @@ EnvironmentOptionsParser::EnvironmentOptionsParser() {
             kAllowedInEnvironment);
   AddOption("--experimental-abortcontroller", "",
             NoOp{}, kAllowedInEnvironment);
+  AddOption("--experimental-https-modules",
+            "experimental https: support for the ES Module loader",
+            &EnvironmentOptions::experimental_https_modules,
+            kAllowedInEnvironment);
   AddOption("--experimental-json-modules",
             "experimental JSON interop support for the ES Module loader",
             &EnvironmentOptions::experimental_json_modules,
