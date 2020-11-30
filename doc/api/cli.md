@@ -253,6 +253,14 @@ effort to report stack traces relative to the original source file.
 Overriding `Error.prepareStackTrace` prevents `--enable-source-maps` from
 modifying the stack trace.
 
+### `--experimental-https-modules`
+<!-- YAML
+added: REPLACEME
+-->
+> Stability: 1 - Experimental
+
+Enable experimental support for loading modules using `import` over `https:`.
+
 ### `--experimental-import-meta-resolve`
 
 <!-- YAML
@@ -1538,6 +1546,7 @@ Node.js options that are allowed are:
 * `--enable-fips`
 * `--enable-source-maps`
 * `--experimental-abortcontroller`
+* `--experimental-https-modules`
 * `--experimental-import-meta-resolve`
 * `--experimental-json-modules`
 * `--experimental-loader`

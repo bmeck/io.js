@@ -100,7 +100,7 @@ function createBase64URL(mime, body) {
       await import(plainESMURL);
       common.mustNotCall()();
     } catch (e) {
-      assert.strictEqual(e.code, 'ERR_INVALID_URL');
+      assert.strictEqual(e.code, 'ERR_UNKNOWN_MODULE_FORMAT');
     }
   }
   {
