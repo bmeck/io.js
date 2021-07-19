@@ -65,9 +65,8 @@ function createBase64URL(mime, body) {
     assert.strictEqual(ns.default, 'this');
   }
   {
-    const ns = await import(`data:application/json;foo=${
-      encodeURIComponent('test,')
-    },0`, { assert: { type: 'json' } });
+    const ns = await import(`data:application/json;foo=${encodeURIComponent('test,')
+      },0`, { assert: { type: 'json' } });
     assert.deepStrictEqual(Object.keys(ns), ['default']);
     assert.strictEqual(ns.default, 0);
   }
@@ -100,7 +99,7 @@ function createBase64URL(mime, body) {
       await import(plainESMURL);
       common.mustNotCall()();
     } catch (e) {
-      assert.strictEqual(e.code, 'ERR_INVALID_URL');
+      assert.strictEqual(e.code, 'ERR_UNKNOWN_MODULE_FORMAT');
     }
   }
   {
