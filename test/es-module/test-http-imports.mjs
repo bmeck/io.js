@@ -131,7 +131,7 @@ for (const { protocol, createServer } of [
     unsupportedMIME.searchParams.set('mime', 'application/node');
     unsupportedMIME.searchParams.set('body', '');
     await assert.rejects(
-      import(unsupportedMIME.href).catch(e => {
+      import(unsupportedMIME.href).catch((e) => {
         console.error(e);
         throw e;
       }),
