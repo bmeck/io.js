@@ -6,19 +6,18 @@ const assert = require('assert');
   await assert.rejects(import('data:text/plain,export default0'), {
     code: 'ERR_UNKNOWN_MODULE_FORMAT',
     message:
-      'Unknown module format: text/plain for URL' +
-      ' data:text/plain,export default0',
+      'Unknown module format: text/plain for URL data:text/plain,' +
+      'export default0',
   });
   await assert.rejects(import('data:text/plain;base64,'), {
-    code: 'ERR_INVALID_MODULE_SPECIFIER',
+    code: 'ERR_UNKNOWN_MODULE_FORMAT',
     message:
-      'Invalid module "data:text/plain;base64," has an unsupported ' +
-      'MIME type "text/plain"',
+      'Unknown module format: text/plain for URL data:text/plain;base64,',
   });
   await assert.rejects(import('data:application/json,[]'), {
-    code: 'ERR_INVALID_MODULE_SPECIFIER',
+    code: 'ERR_UNKNOWN_MODULE_FORMAT',
     message:
-      'Invalid module "data:application/json,[]" has an unsupported ' +
-      'MIME type "application/json"',
+      'Unknown module format: application/json for URL data:application/json,' +
+      '[]',
   });
 })().then(common.mustCall());
