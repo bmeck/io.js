@@ -632,8 +632,8 @@ Automatic protocol negotiation for HTTP/2 and HTTP/3 is not yet supported.
 
 ### HTTP is limited to loopback addresses
 
-`http:` is vulnerable to man in the middle attacks and is not allowed to be used
-for addresses outside of the IPv4 address 127.0.0.1 and the IPv6 address ::1 .
+`http:` is vulnerable to man-in-the-middle attacks and is not allowed to be used
+for addresses outside of the IPv4 address 127.0.0.1 and the IPv6 address ::1.
 Support for `http:` is intended to be used for local development.
 
 ### Authentication is never sent to the destination server.
@@ -657,6 +657,7 @@ Usage of parameters and initializers can get around this:
 // file.mjs
 import worker_threads from 'worker_threads';
 import { configure, resize } from 'https://example.com/imagelib.mjs';
+configure({ worker_threads });
 ```
 
 ```mjs
