@@ -634,7 +634,7 @@ export function resize(img, size) {
 
 ### Network-based loading is not enabled by default.
 
-For now, this is enforced by the flag required to enable them. In the future a
+For now, a flag is required to enable them. In the future, a
 different mechanism will be used to enforce this. By requiring opt-in to network
 based loading, it prevents transitive dependencies from accidentally using
 potentially mutable state that could affect reliability of Node.js applications.
