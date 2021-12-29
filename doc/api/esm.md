@@ -651,7 +651,7 @@ server-based implementation.
 ### Cannot load non-network dependencies
 
 These modules cannot access other modules that are not over `http:` or `https:`.
-Usage of parameters and initializers can get around this:
+To avoid the security concern and still leverage non-remote dependencies, use an initializer and pass in the dependencies:
 
 ```mjs
 // file.mjs
